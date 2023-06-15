@@ -2,18 +2,24 @@ import Color from "color";
 import { Link } from 'react-router-dom';
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import Grid from '@mui/material/Grid';
 import CardActionArea from '@mui/material/CardActionArea';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { makeStyles } from "@mui/styles";
+import Header from "./Header";
 
 const useStyles = makeStyles(() => ({
   page: {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
+  },
+  bg: {
+    position: "absolute",
+    minWidth: "100%",
+    resizeMode: "contain",
+    opacity: 0.5,
   },
   body: {
     display: "flex",
@@ -32,6 +38,7 @@ const useStyles = makeStyles(() => ({
     alignContent: "center",
     paddingLeft: "60px",
     paddingRight: "60px",
+    paddingTop: "200px",
   },
   subcontainer: {
     display: "flex",
@@ -41,22 +48,6 @@ const useStyles = makeStyles(() => ({
     maxWidth: "500px",
     minWidth: "300px",
     padding: "50px",
-  },
-  sitetitle: {
-      color: "#322619",
-      display: 'flex',
-      overflow: "hidden",
-      whiteSpace: "nowrap",
-      justifyContent: 'center',
-      fontSize: 50,
-      fontWeight: 'bold',
-      marginBottom: 30,
-      paddingTop: '100px',
-      letterSpacing: 15,
-  },
-  divider: {
-      color: "#77773c",
-      marginBottom: 30,
   },
   actionArea: {
       borderRadius: 50,
@@ -125,24 +116,16 @@ const CustomCard = ({ classes, link, image, title, subtitle }) => {
     );
   };
 
-  const useGridStyles = makeStyles(({ breakpoints }) => ({
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignContent: "center",
-  }));
-
 export default function Home(props) {
   const classes = useStyles();
   const findCardstyles = useStyles({ color: '#34241e' });
   const workCardstyles = useStyles({ color: '#203f52' });
-  const gridStyles = useGridStyles();
 
   return (
     <div className={classes.page}>
-      <body className={classes.body}>
-        <div className={classes.sitetitle}>資源教室小窩</div>
-        <Divider className={classes.divider} />
+    <Header/>
+      <body className={classes.body} >
+        <img className={classes.bg} src="/RRoom.png" alt=""/>
         <div className={classes.container}>
         <div className={classes.subcontainer}>
             <Link to={'/HomeSearch'}>

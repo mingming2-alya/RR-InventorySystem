@@ -8,6 +8,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { makeStyles } from "@mui/styles";
+import Header from "./Header";
 
 const useStyles = makeStyles(() => ({
   page: {
@@ -125,6 +126,7 @@ export default function Home(props) {
 
   return (
     <div className={classes.page}>
+    <Header/>
       <body className={classes.body}>
         <div className={classes.sitetitle}>尋找</div>
         <Divider className={classes.divider} />
