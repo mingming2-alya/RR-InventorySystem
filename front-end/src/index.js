@@ -7,6 +7,7 @@ import Home from './Home';
 import HomeSearch from './HomeSearch';
 import HomeInventory from './HomeInventory';
 import reportWebVitals from './reportWebVitals';
+import SearchPage from './SearchPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
             <Route exact path="/Home" element={<Home/>}/>
             <Route exact path="/HomeSearch" element={<HomeSearch/>}/>
             <Route exact path="/HomeInventory" element={<HomeInventory/>}/>
+            <Route exact path="/SearchPage" element={<SearchPage/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>,

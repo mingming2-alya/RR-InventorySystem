@@ -1,7 +1,6 @@
 import Color from "color";
 import { Link } from 'react-router-dom';
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 import CardActionArea from '@mui/material/CardActionArea';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -19,7 +18,7 @@ const useStyles = makeStyles(() => ({
     position: "absolute",
     minWidth: "100%",
     resizeMode: "contain",
-    opacity: 0.5,
+    opacity: 0.4,
   },
   body: {
     display: "flex",
@@ -88,12 +87,11 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const CustomCard = ({ classes, link, image, title, subtitle }) => {
+const CustomCard = ({ classes, image, title, subtitle }) => {
     const mediaStyles = makeStyles(() => ({
         root: ({ bgColor = 'rgba(0, 0, 0, 0.08)' }) => ({
         width: '100%',
         height: 0,
-        paddingBottom: '75%',
         backgroundColor: bgColor,
       }),
     }));

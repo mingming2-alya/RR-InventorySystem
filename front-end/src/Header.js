@@ -19,20 +19,37 @@ const drawerWidth = 240;
 const toolbarStyle = {
   minHeight: '80px',
 };
+const navItems = [
+  { label: '尋找物品', path: '/HomeSearch' },
+  { label: '盤點物品', path: '/HomeInventory' },
+];
+
+const barmenu = (
+  <Box sx={{ display: { xs: 'none', sm: 'block'}}}>
+    {navItems.map((nav) => (
+      <Link 
+        key={nav.path} 
+        to={nav.path} 
+        style={{ textDecoration: 'none', color: '#c8d3c5' }}
+      >
+        <Button 
+          sx={{ color: '#322619', fontSize: '15pt', fontWeight: 'bold' }}
+        >
+          {nav.label}
+        </Button>
+      </Link>
+    ))}
+  </Box>
+);
 
 export default function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const navItems = [
-    { label: '尋找物品', path: '/HomeSearch' },
-    { label: '盤點物品', path: '/HomeInventory' },
-    { label: '我是老師', path: '/TeacherSignIn' },
-  ];
-
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
     
   };
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -52,20 +69,7 @@ export default function Header(props) {
     </Box>
   );
 
-  const barmenu = (
-    <Box sx={{ display: { xs: 'none', sm: 'block'}}}>
-      {navItems.map((nav) => (
-      <Link key={nav.path} to={nav.path} style={{ textDecoration: 'none', color: '#c8d3c5' }}>
-        <Button sx={{ color: '#322619', fontSize: '15pt', fontWeight: 'bold' }}>
-          {nav.label}
-        </Button>
-      </Link>
-    ))}
-    </Box>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
+  
   return (
     <Box sx={{ display: 'flex'}}>
       <AppBar component="nav" sx={{backgroundColor: 'white',opacity: 0.7}}>
