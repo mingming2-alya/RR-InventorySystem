@@ -82,40 +82,6 @@ const navItems = [
 export default function HomeSearch(props) {
   const classes = useStyles();
   
-  const CustomCard = () => {
-    return (
-      <Container sx={{ pb: 8 }} maxWidth="md">
-            {/* End hero unit */}
-        <Grid container spacing={4} justifyContent="center">
-        {navItems.map((nav) => (
-          <Grid item xs={8} sm={5} md={4}>
-            <Link to='/SearchPage'>
-              <CardActionArea className={classes.actionArea}>
-              <Card sx={{ maxWidth: '100%', minWidth: 200, boxShadow: 'lg' }}>
-                <CardOverflow>
-                  <AspectRatio sx={{ minWidth: 200, maxWidth: "100% "}}>
-                    <img
-                      src={nav.link}
-                      srcSet={nav.link2x}
-                      loading="lazy"
-                      alt=""
-                    />
-                  </AspectRatio>
-                </CardOverflow>
-                <CardContent sx={{backgroundColor: "#34241e", paddingY: '10px', paddingLeft: '20px'}}>
-                <Typography fontSize="xl" fontWeight="xl" color="white" sx={{ mt: 1, justifyContent: 'center' }}>
-                    {nav.label}
-                </Typography>
-                </CardContent>
-              </Card>
-              </CardActionArea>
-            </Link>
-            </Grid>
-        ))}
-        </Grid>
-      </Container>
-    );
-  };
 
   return (
     <div className={classes.page}>
@@ -125,8 +91,8 @@ export default function HomeSearch(props) {
         <div className={classes.content}>
           <div className={classes.sitetitle}>尋找物品</div>
         </div>
-        <div className={classes.container}>
-          <CustomCard/>
+        <div className={classes.sitetitle}>
+          功能開發中
         </div>
       </body>
     </div>

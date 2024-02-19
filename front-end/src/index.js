@@ -8,6 +8,7 @@ import HomeSearch from './HomeSearch';
 import HomeInventory from './HomeInventory';
 import reportWebVitals from './reportWebVitals';
 import SearchPage from './SearchPage';
+import OfficeInventory from './OfficeInventory';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route exact path="/HomeSearch" element={<HomeSearch/>}/>
             <Route exact path="/HomeInventory" element={<HomeInventory/>}/>
             <Route exact path="/SearchPage" element={<SearchPage/>}/>
+            <Route exact path="/OfficeInventory" element={<OfficeInventory/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>,

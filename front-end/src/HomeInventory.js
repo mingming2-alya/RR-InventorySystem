@@ -70,13 +70,13 @@ const useStyles = makeStyles(() => ({
 }));
 
 const navItems = [
-    { label: '辦公用品', path: '/HomeSearch', link: 'https://imgur.com/dbpUIAg.jpg', link2x: 'https://imgur.com/dbpUIAg.jpg 2x' },
-    { label: '各式書籍', path: '/BookGameSearch', link: 'https://imgur.com/o27q3n3.jpg', link2x: 'https://imgur.com/o27q3n3.jpg 2x' },
-    { label: '桌遊卡牌', path: '/BookGameSearch', link: 'https://imgur.com/y2W2QAf.jpg', link2x: 'https://imgur.com/y2W2QAf.jpg 2x' },
-    { label: '電子電器', path: '/HomeInventory', link: 'https://imgur.com/oYHDu3r.jpg', link2x: 'https://imgur.com/oYHDu3r.jpg 2x' },
-    { label: '廚房用品', path: '/HomeInventory', link: 'https://imgur.com/v4mKF0h.jpg', link2x: 'https://imgur.com/v4mKF0h.jpg 2x' },
-    { label: '五金工具', path: '/TeacherSignIn', link: 'https://imgur.com/U79rs5m.jpg', link2x: 'https://imgur.com/U79rs5m.jpg 2x' },
-    { label: '其他類別', path: '/TeacherSignIn', link: 'https://imgur.com/bOh5EQP.jpg', link2x: 'https://imgur.com/bOh5EQP.jpg 2x' },
+    { label: '辦公用品', path: '/OfficeInventory', link: 'https://imgur.com/dbpUIAg.jpg', link2x: 'https://imgur.com/dbpUIAg.jpg 2x' },
+    { label: '各式書籍', path: '/BookInventory', link: 'https://imgur.com/o27q3n3.jpg', link2x: 'https://imgur.com/o27q3n3.jpg 2x' },
+    { label: '桌遊卡牌', path: '/GameInventory', link: 'https://imgur.com/y2W2QAf.jpg', link2x: 'https://imgur.com/y2W2QAf.jpg 2x' },
+    { label: '電子電器', path: '/ElectronicInventory', link: 'https://imgur.com/oYHDu3r.jpg', link2x: 'https://imgur.com/oYHDu3r.jpg 2x' },
+    { label: '廚房用品', path: '/KitchenInventory', link: 'https://imgur.com/v4mKF0h.jpg', link2x: 'https://imgur.com/v4mKF0h.jpg 2x' },
+    { label: '五金工具', path: '/ToolInventory', link: 'https://imgur.com/U79rs5m.jpg', link2x: 'https://imgur.com/U79rs5m.jpg 2x' },
+    { label: '其他類別', path: '/OtherInventory', link: 'https://imgur.com/bOh5EQP.jpg', link2x: 'https://imgur.com/bOh5EQP.jpg 2x' },
 ];
 
 export default function HomeInventory(props) {
